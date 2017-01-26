@@ -15,7 +15,7 @@ Setting Up with AWS Lambda, AWS KMS, and AWS Gateway API
 
 	(Using the 'aws' CLI)
 
-	aws kms encrypt --key-id THE_KEY_ID --plaintext "{\"username\": \"ORG_WRITING_GH_USERNAME\", \"password\": \"THE_PASSWORD\"}" --query CiphertextBlob --output text | base64 -D > ./encrypted-secret
+	aws kms encrypt --key-id THE_KEY_ID --plaintext "{\"username\": \"ORG_WRITING_GH_USERNAME\", \"password\": \"THE_PASSWORD\", \"token\": \"TOKEN_TO_RUN\"}" --query CiphertextBlob --output text | base64 -D > ./encrypted-secret
 
 2. Package the code with the encrypted file and upload to Lambda:
 
